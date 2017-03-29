@@ -83,6 +83,6 @@ RUN set -e \
 		exit 1; \
 	fi
 RUN rm -rf /usr/local/tomcat/webapps/
-COPY target/sprimberj-backend-1.0-SNAPSHOT.war /usr/local/tomcat/webapps/webapp.war
+COPY target/*.war /usr/local/tomcat/webapps/webapp.war
 EXPOSE 8080
 CMD ["catalina.sh", "run"]
